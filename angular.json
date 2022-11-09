@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-ui5-web-component-scoping-demo": {
+      "projectType": "library",
+      "root": "projects/ngx-ui5-web-component-scoping-demo",
+      "sourceRoot": "projects/ngx-ui5-web-component-scoping-demo/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-ui5-web-component-scoping-demo/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ui5-web-component-scoping-demo/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-ui5-web-component-scoping-demo/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ui5-web-component-scoping-demo/src/test.ts",
+            "tsConfig": "projects/ngx-ui5-web-component-scoping-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ui5-web-component-scoping-demo/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
