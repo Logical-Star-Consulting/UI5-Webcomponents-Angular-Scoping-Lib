@@ -1,4 +1,4 @@
-# UI5WebcomponentsAngularScopingLib
+# Angular Based UI5 Web Components Scoping Demo Library
 This Angular library was setup to demonstrate scoping in UI5 Web Components, which should be leveraged when building a library or microfrontend.  To find out more about scoping, refer to the [official documentation](https://sap.github.io/ui5-webcomponents/playground/advanced/scoping/). 
 
 This project is referenced by the demo project [UI5-Webcomponents-Angular-Scoping](https://github.com/Logical-Star-Consulting/UI5-Webcomponents-Angular-Scoping)
