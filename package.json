@@ -21,8 +21,6 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "@ui5/webcomponents": "1.8.0",
-    "@ui5/webcomponents-base": "1.8.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -39,6 +37,12 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^14.2.0",
-    "typescript": "~4.7.2"
+    "typescript": "~4.7.2",
+    "webcomponents-1-8": "npm:@ui5/webcomponents@1.8.0",
+    "@ui5/webcomponents-base": "1.8.0"
+  },
+  "peerDependencies": {
+    "webcomponents-1-8": "npm:@ui5/webcomponents@1.8.0",
+    "@ui5/webcomponents-base": "1.8.0"
   }
 }

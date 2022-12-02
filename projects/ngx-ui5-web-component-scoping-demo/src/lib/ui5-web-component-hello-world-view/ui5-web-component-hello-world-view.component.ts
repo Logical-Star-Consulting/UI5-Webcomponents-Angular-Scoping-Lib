@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+import "webcomponents-1-8/dist/BusyIndicator";
+import "webcomponents-1-8/dist/Label";
+import "webcomponents-1-8/dist/Input";
+import "webcomponents-1-8/dist/Title";
 
-
-import "@ui5/webcomponents/dist/BusyIndicator";
+//import { setCustomElementsScopingSuffix } from 'webcomponents-base-1-8/dist/CustomElementsScope';
 import { setCustomElementsScopingSuffix } from '@ui5/webcomponents-base/dist/CustomElementsScope';
+setCustomElementsScopingSuffix
 setCustomElementsScopingSuffix("scoping-demo");
-
-
 
 @Component({
   selector: 'lib-ui5-web-component-hello-world-view',

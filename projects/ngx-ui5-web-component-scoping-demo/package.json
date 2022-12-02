@@ -1,9 +1,15 @@
 {
   "name": "ngx-ui5-web-component-scoping-demo",
-  "version": "0.0.3",
+  "version": "0.0.20",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
+    "@angular/core": "^14.2.0",
+    "webcomponents-1-8": "npm:@ui5/webcomponents@1.8.0",
+    "@ui5/webcomponents-base": "1.8.0"
+  },
+  "devDependencies": {
+    "webcomponents-1-8": "npm:@ui5/webcomponents@1.8.0",
+    "@ui5/webcomponents-base": "1.8.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

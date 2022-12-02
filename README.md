@@ -1,19 +1,29 @@
 # UI5WebcomponentsAngularScopingLib
+This Angular library was setup to demonstrate scoping in UI5 Web Components, which should be leveraged when building a library or microfrontend.  To find out more about scoping, refer to the [official documentation](https://sap.github.io/ui5-webcomponents/playground/advanced/scoping/). 
+
+This project is referenced by the demo project [UI5-Webcomponents-Angular-Scoping](https://github.com/Logical-Star-Consulting/UI5-Webcomponents-Angular-Scoping)
+
+## How to do it?
+When creating your library component, make sure to alias the specific referenced UI5 Web Component libraries. For example...
+```
+"webcomponents-1-8": "npm:@ui5/webcomponents@1.8.0",
+```
+
+When importing components into your component, make sure to reference via the alias.
+```
+import "webcomponents-1-8/dist/Label";
+import "webcomponents-1-8/dist/Input";
+import "webcomponents-1-8/dist/Title";
+```
+
+Import the component base libary, ensuring you do not alias it.  
+```
+"@ui5/webcomponents-base": "1.8.0"
+```
+
+As the webcomponents-base library does not fully support TypeScript definitions (see [github discussion](https://github.com/SAP/ui5-webcomponents-react/discussions/1136) and [issue 4337](https://github.com/SAP/ui5-webcomponents/issues/4337)) we had to create our own declaration in the directory ```types/ui5__webcomponents-base``` to circumvent this and also had to add "noImplicitAny": false to tsconfig.lib.json.   
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
-
-https://dev.to/jsanddotnet/create-an-angular-library-and-consume-it-locally-with-debugging-cma
-
-For issue importing the library
-https://stackoverflow.com/questions/69224464/angular-could-not-find-a-declaration-file-for-module-file-saver
- 
-
-TS Definitions not available for base
-https://github.com/SAP/ui5-webcomponents-react/discussions/1136 
-https://github.com/SAP/ui5-webcomponents/issues/4337
-had to add  "noImplicitAny": false to tsconfig.lib.json
-https://pjausovec.medium.com/how-to-fix-error-ts7016-could-not-find-a-declaration-file-for-module-xyz-has-an-any-type-ecab588800a8
-
 
 ## Development server
 
@@ -25,7 +35,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  Ensures the post build scripts run.   
 
 ## Running unit tests
 
